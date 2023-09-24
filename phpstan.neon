@@ -1,0 +1,10 @@
+parameters:
+    paths:
+        - bin
+        - src
+        - tests
+
+    level: 8
+
+    ignoreErrors:
+        - '#non-empty-string, string given#'
