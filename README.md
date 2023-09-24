@@ -17,5 +17,5 @@ composer require tomasvotruba/editorconfig-fixer --dev
 ## Usage
 
 ```bash
-vendor/bin/ec-fixer <paths> --suffix yaml --suffix yml
+vendor/bin/ec-fixer <paths> --suffix yaml
 ```
