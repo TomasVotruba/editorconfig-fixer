@@ -41,7 +41,7 @@ note "Dumping Composer Autoload"
 composer dump-autoload --ansi --classmap-authoritative --no-dev
 
 # make bin runnable without "php"
-chmod 777 "bin/lines"
-chmod 777 "bin/lines.php"
+chmod 777 "bin/editorconfig-fixer"
+chmod 777 "bin/editorconfig-fixer.php"
 
 note "Finished"

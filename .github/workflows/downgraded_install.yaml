@@ -18,8 +18,7 @@ jobs:
 
             # add some packages that could create confligs
             -   run: composer require symfony/console:^4.4 --ansi
-            -   run: composer require nette/utils --ansi
 
             # install this package
-            -   run: composer require tomasvotruba/lines --ansi
-            -   run: vendor/bin/lines --ansi
+            -   run: composer require tomasvotruba/editorconfig-fixer --ansi
+            -   run: vendor/bin/editorconfig-fixer --ansi
