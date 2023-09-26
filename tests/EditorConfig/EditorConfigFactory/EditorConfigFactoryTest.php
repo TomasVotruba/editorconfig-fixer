@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace TomasVotruba\EditorconfigFixer\Tests\EditorConfig;
+namespace TomasVotruba\EditorconfigFixer\Tests\EditorConfig\EditorConfigFactory;
 
 use TomasVotruba\EditorconfigFixer\EditorConfig\EditorConfigFactory;
 use TomasVotruba\EditorconfigFixer\Tests\AbstractTestCase;
