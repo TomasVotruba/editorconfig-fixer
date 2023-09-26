@@ -27,9 +27,9 @@ final class FixCommand extends Command
     private const FILE_SUFFIX_PATTERN = '#^[a-z]{3,4}$#';
 
     public function __construct(
-        private readonly PhpFilesFinder      $phpFilesFinder,
-        private readonly SymfonyStyle        $symfonyStyle,
-        private readonly IndentationFixer    $indentionFixer,
+        private readonly PhpFilesFinder $phpFilesFinder,
+        private readonly SymfonyStyle $symfonyStyle,
+        private readonly IndentationFixer $indentationFixer,
         private readonly EditorConfigFactory $editorConfigFactory,
     ) {
         parent::__construct();
@@ -72,7 +72,7 @@ final class FixCommand extends Command
             $fileContents = file_get_contents($filePath);
             Assert::string($fileContents);
 
-            $fixedFileContents = $this->indentionFixer->fixContent($fileContents, $specificFileEditorConfig);
+            $fixedFileContents = $this->indentationFixer->fixContent($fileContents, $specificFileEditorConfig);
             if ($fileContents === $fixedFileContents) {
                 continue;
             }
@@ -113,11 +113,11 @@ final class FixCommand extends Command
     {
         $suffix = $input->getOption('suffix');
 
-        if ($suffix === '') {
+        if ($suffix === '' || $suffix === null) {
             throw new ShouldNotHappenException('Fill the suffix, e.g. "--suffix yaml"');
         }
 
-        if (! preg_match(self::FILE_SUFFIX_PATTERN, $suffix)) {
+        if (! preg_match(self::FILE_SUFFIX_PATTERN, (string) $suffix)) {
             throw new ShouldNotHappenException(
                 sprintf('The suffix "%s" is not valid. Provide 3-4 alpha chars, e.g. "json", "php" or "yml".', $suffix)
             );
