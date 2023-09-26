@@ -7,7 +7,7 @@ namespace TomasVotruba\EditorconfigFixer\EditorConfig;
 use TomasVotruba\EditorconfigFixer\NumberUtils;
 use TomasVotruba\EditorconfigFixer\StringUtils;
 
-final class IndentionFixer
+final class IndentationFixer
 {
     public function fixContent(string $content, EditorConfig $editorConfig): string
     {

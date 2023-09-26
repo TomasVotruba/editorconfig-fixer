@@ -12,7 +12,7 @@ use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\Console\Style\SymfonyStyle;
 use TomasVotruba\EditorconfigFixer\EditorConfig\EditorConfigFactory;
-use TomasVotruba\EditorconfigFixer\EditorConfig\IndentionFixer;
+use TomasVotruba\EditorconfigFixer\EditorConfig\IndentationFixer;
 use TomasVotruba\EditorconfigFixer\Exception\ShouldNotHappenException;
 use TomasVotruba\EditorconfigFixer\FilePathHelper;
 use TomasVotruba\EditorconfigFixer\Finder\PhpFilesFinder;
@@ -27,9 +27,9 @@ final class FixCommand extends Command
     private const FILE_SUFFIX_PATTERN = '#^[a-z]{3,4}$#';
 
     public function __construct(
-        private readonly PhpFilesFinder $phpFilesFinder,
-        private readonly SymfonyStyle $symfonyStyle,
-        private readonly IndentionFixer $indentionFixer,
+        private readonly PhpFilesFinder      $phpFilesFinder,
+        private readonly SymfonyStyle        $symfonyStyle,
+        private readonly IndentationFixer    $indentionFixer,
         private readonly EditorConfigFactory $editorConfigFactory,
     ) {
         parent::__construct();
