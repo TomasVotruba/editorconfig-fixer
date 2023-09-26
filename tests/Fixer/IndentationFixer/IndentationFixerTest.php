@@ -33,9 +33,9 @@ final class IndentationFixerTest extends AbstractTestCase
 
     public static function provideData(): Iterator
     {
-        yield [
-            __DIR__ . '/Fixture/some_file.yaml',
-            __DIR__ . '/Fixture/fixed_some_file.yaml',
-        ];
+        yield [__DIR__ . '/Fixture/some_file.yaml', __DIR__ . '/Fixture/fixed_some_file.yaml'];
+
+        // there is single space typo here
+        yield [__DIR__ . '/Fixture/typoed_some_file.yaml', __DIR__ . '/Fixture/fixed_typoed_some_file.yaml'];
     }
 }
