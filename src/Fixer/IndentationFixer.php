@@ -2,8 +2,9 @@
 
 declare(strict_types=1);
 
-namespace TomasVotruba\EditorconfigFixer\EditorConfig;
+namespace TomasVotruba\EditorconfigFixer\Fixer;
 
+use TomasVotruba\EditorconfigFixer\EditorConfig\EditorConfig;
 use TomasVotruba\EditorconfigFixer\NumberUtils;
 use TomasVotruba\EditorconfigFixer\StringUtils;
 

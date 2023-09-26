@@ -15,4 +15,10 @@ final class NumberUtilsTest extends TestCase
 
         $this->assertSame(4, $greatestCommonDivisor);
     }
+
+    public function testTypoIndent(): void
+    {
+        $greatestCommonDivisor = NumberUtils::resolveGreatestCommonDivisor([4, 7, 16]);
+        $this->assertSame(4, $greatestCommonDivisor);
+    }
 }

@@ -12,10 +12,10 @@ use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\Console\Style\SymfonyStyle;
 use TomasVotruba\EditorconfigFixer\EditorConfig\EditorConfigFactory;
-use TomasVotruba\EditorconfigFixer\EditorConfig\IndentationFixer;
 use TomasVotruba\EditorconfigFixer\Exception\ShouldNotHappenException;
 use TomasVotruba\EditorconfigFixer\FilePathHelper;
 use TomasVotruba\EditorconfigFixer\Finder\PhpFilesFinder;
+use TomasVotruba\EditorconfigFixer\Fixer\IndentationFixer;
 use Webmozart\Assert\Assert;
 
 final class FixCommand extends Command
